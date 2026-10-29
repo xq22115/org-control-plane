@@ -39,3 +39,9 @@ Organization control plane after Enterprise/Team → **Free org** + personal **P
 - scripts/durable_hygiene.py — checkpointed PR/branch hygiene
 - scripts/pre_merge_compile_gate.py — stop SyntaxError merges
 - Workflow: Completion Hygiene (weekly report; dispatch apply)
+
+## Soft-pass + ordinary-chat GitHub
+
+- [docs/SOFT-PASS-SEARCH-THINKING.md](./docs/SOFT-PASS-SEARCH-THINKING.md)
+- [docs/GPT-ORDINARY-CHAT-GITHUB.md](./docs/GPT-ORDINARY-CHAT-GITHUB.md)
+- [evidence/five-agent-debate-20261029.json](./evidence/five-agent-debate-20261029.json)
