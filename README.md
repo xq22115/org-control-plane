@@ -31,3 +31,11 @@ Organization control plane after Enterprise/Team → **Free org** + personal **P
 
 - [RE-AUDIT-3X-AFTER.md](./RE-AUDIT-3X-AFTER.md) — live ≥3× after metrics (2026-10-29)
 - [evidence/after_3x_metrics.json](./evidence/after_3x_metrics.json)
+
+## Completion layer (anti half-done)
+
+- [docs/COMPLETION-CONTRACT.md](./docs/COMPLETION-CONTRACT.md)
+- [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md)
+- scripts/durable_hygiene.py — checkpointed PR/branch hygiene
+- scripts/pre_merge_compile_gate.py — stop SyntaxError merges
+- Workflow: Completion Hygiene (weekly report; dispatch apply)
