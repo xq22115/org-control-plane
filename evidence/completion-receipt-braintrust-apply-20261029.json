@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-10-29T10:56:06.421437+00:00",
+  "repo": "xq22115/braintrust",
+  "mode": "apply",
+  "status": "VERIFIED",
+  "checkpoint_path": "/Users/shixianjixianziji/\u6b63\u5f0f/tmp-org-strengthen-20261029/completion-arch/evidence/hygiene-checkpoint-xq22115__braintrust.json",
+  "ops": {
+    "prs_closed_or_candidates": 12,
+    "branches_deleted_or_candidates": 12,
+    "failed": 0,
+    "checkpoint_closed_prs": 12,
+    "checkpoint_deleted_branches": 12
+  },
+  "readback": {
+    "before": {
+      "open_prs": 19,
+      "branches": 24
+    },
+    "after": {
+      "open_prs": 7,
+      "branches": 12
+    }
+  },
+  "errors": []
+}
