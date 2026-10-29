@@ -1,0 +1,262 @@
+{
+  "metrics": {
+    "repo_count": 7,
+    "github_apps": 11,
+    "workflow_total_listed": 346,
+    "recent_failure_runs_sampled": 50,
+    "open_dependabot_alert_samples": 5,
+    "write_all_workflow_hits": 6,
+    "required_check_mismatch_repos": 1,
+    "findings_by_sev": {
+      "P1": 5,
+      "P2": 9
+    }
+  },
+  "findings": [
+    {
+      "sev": "P1",
+      "area": "org.rulesets",
+      "issue": "Org rulesets unavailable on Free plan",
+      "evidence": "Upgrade to GitHub Team to enable this feature."
+    },
+    {
+      "sev": "P2",
+      "area": "org.actions",
+      "issue": "Actions allow all + no SHA pin \u2014 max automation but supply-chain soft",
+      "evidence": {
+        "enabled_repositories": "all",
+        "allowed_actions": "all",
+        "sha_pinning_required": false
+      },
+      "note": "Keep for GPT automation; mitigate via Dependabot Actions groups + pin in critical workflows over time"
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/ai-thinking-debate-skills-lab",
+      "issue": "High branch count (100) \u2014 merge hygiene leak",
+      "evidence": [
+        "agent/antigravity-skill-suite-v1",
+        "architecture/autonomous-learning-debug-v1",
+        "chat-task/v5-e2e-doc-upgrade",
+        "chat-task/v5-mcp-lockfile",
+        "chatgpt/github-host-root-v3-20260911",
+        "chatgpt/github-operation-loop-v2-20260911",
+        "debate/01-local-runtime-20260826",
+        "debate/02-browser-control-20260826",
+        "debate/03-computer-use-20260826",
+        "debate/04-memory-continuity-20260826",
+        "debate/05-durable-workflows-20260826",
+        "debate/06-security-approvals-20260826",
+        "debate/07-visual-interface-20260826",
+        "debate/08-harness-acp-portability-20260826",
+        "debate/09-observability-evals-20260826"
+      ]
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/braintrust",
+      "issue": "High branch count (100) \u2014 merge hygiene leak",
+      "evidence": [
+        "acceptance/hosted-watchdog-probe-20260824",
+        "acceptance/lifecycle-stage-probe-a-20260824",
+        "acceptance/pr-558-lifecycle-handoff-live-20260823",
+        "acceptance/pr-558-lifecycle-handoff-post571-20260823",
+        "adult-runtime-boundary-evidence-refresh-20260904",
+        "adult-runtime-evidence-sync-20260904",
+        "agent/adaptive-core-v3-followup",
+        "agent/dev",
+        "agent/execution-kernel-v1",
+        "agent/experiment",
+        "agent/fix",
+        "agent/gpt-deep-research-extension",
+        "agent/huggingface-github-bridge",
+        "agent/research",
+        "agent/work-parity-20260818-01"
+      ]
+    },
+    {
+      "sev": "P1",
+      "area": "xq22115/braintrust",
+      "issue": "required-checks.yml names may not match active workflow names",
+      "evidence": [
+        "Skill Pack Integrity",
+        "Workflow Security",
+        "Workflow Registry Audit",
+        "Validate Capability Hub",
+        "Validate Agent Admin Bootstrap",
+        "Validate Agent Admin Convergence",
+        "Validate Agent Core V4"
+      ]
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/braintrust",
+      "issue": "pull_request_target present \u2014 verify untrusted checkout",
+      "evidence": ".github/workflows/pr-queue-gc.yml"
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/braintrust",
+      "issue": "pull_request_target present \u2014 verify untrusted checkout",
+      "evidence": ".github/workflows/validate-agent-core-v4.yml"
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/braintrust",
+      "issue": "pull_request_target present \u2014 verify untrusted checkout",
+      "evidence": ".github/workflows/workflow-registry-audit.yml"
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/demo-repository",
+      "issue": "High branch count (94) \u2014 merge hygiene leak",
+      "evidence": [
+        "acceptance/10-agent-run",
+        "add-badges-to-readme",
+        "agent/27/A01/20260817T064358Z-cp-v2",
+        "agent/27/A02/20260817T064358Z-cp-v2",
+        "agent/27/A03/20260817T064358Z-cp-v2",
+        "agent/27/A04/20260817T064358Z-cp-v2",
+        "agent/27/A05/20260817T064358Z-cp-v2",
+        "agent/27/A06/20260817T064358Z-cp-v2",
+        "agent/27/A07/20260817T064358Z-cp-v2",
+        "agent/27/A08/20260817T064358Z-cp-v2",
+        "agent/27/A09/20260817T064358Z-cp-v2",
+        "agent/27/A10/20260817T064358Z-cp-v2",
+        "agent/32/A07/20260817T140540Z-execbridge",
+        "agent-core-cooldown-20260817",
+        "agent-core-hardening-20260817"
+      ]
+    },
+    {
+      "sev": "P2",
+      "area": "xq22115/demo-repository",
+      "issue": "pull_request_target present \u2014 verify untrusted checkout",
+      "evidence": ".github/workflows/validate-agent-core-v4.yml"
+    },
+    {
+      "sev": "P2",
+      "area": "merge",
+      "issue": "allow_auto_merge still false",
+      "evidence": [
+        "xq22115/vercel-ai-foundation-e2e-canary"
+      ]
+    },
+    {
+      "sev": "P1",
+      "area": "actions.permissions",
+      "issue": "workflows with write-all permissions",
+      "evidence": [
+        "xq22115/braintrust:.github/workflows/validate-agent-core-v4.yml",
+        "xq22115/braintrust:.github/workflows/workflow-registry-audit.yml",
+        "xq22115/demo-repository:.github/workflows/validate-agent-core-v4.yml",
+        "xq22115/demo-repository:.github/workflows/workflow-registry-audit.yml",
+        "xq22115/cursor:.github/workflows/validate-agent-core-v4.yml",
+        "xq22115/cursor:.github/workflows/workflow-registry-audit.yml"
+      ],
+      "count": 6
+    },
+    {
+      "sev": "P1",
+      "area": "duplication",
+      "issue": "Duplicate vercel canary on org and personal Pro",
+      "evidence": {
+        "org_pushed": "2026-10-29T09:58:17Z",
+        "pixel_pushed": "2026-10-25T21:47:55Z",
+        "org_workflows": "see per_repo"
+      }
+    },
+    {
+      "sev": "P1",
+      "area": "xq22115/braintrust",
+      "issue": "agent-core-policy enforcement is advisory \u2014 Free org cannot activate protect-main ruleset",
+      "evidence": "live_repository.enforcement: advisory"
+    }
+  ],
+  "fix": {
+    "pr": "https://github.com/xq22115/braintrust/pull/923",
+    "branch": "fix/closeout-stale-reconcile-3x-20261029",
+    "branch_cleanup": {
+      "xq22115/braintrust": {
+        "deleted": 0,
+        "failed": 0,
+        "sample_deleted": []
+      },
+      "xq22115/cursor": {
+        "deleted": 2,
+        "failed": 0,
+        "sample_deleted": [
+          "hardening/deep-research-v3",
+          "ai/deep-research-control-plane-20260816"
+        ]
+      },
+      "xq22115/demo-repository": {
+        "deleted": 23,
+        "failed": 0,
+        "sample_deleted": [
+          "fix/chatgpt-renderer-runtime-20260825",
+          "fix/codex-transport-fallback-20260825",
+          "fix/chat-bridge-write-stream-stalls-20260825",
+          "fix/global-quality-runtime-20260825",
+          "feat/github-income-workbench-20260817",
+          "agent-core-v5-admin-drift-20260817",
+          "feat/github-income-os-v1",
+          "feat/universal-agent-chat-bridge-v0.1",
+          "feat/github-income-engine-v1",
+          "feat/autonomy-orchestrator-v2",
+          "acceptance/10-agent-run",
+          "setup/ai-master-system",
+          "agent-core-v5-live-proof-20260817",
+          "agent-core-v5-control-contracts-20260817",
+          "agent-core-v4-admin-live-proof-20260817",
+          "agent-core-v4-admin-implementation-20260817",
+          "agent-core-v4-positive-proof-20260817",
+          "agent-core-v4-20260817",
+          "agent-core-cooldown-20260817",
+          "agent-core-v3-20260817"
+        ]
+      },
+      "xq22115/ai-thinking-debate-skills-lab": {
+        "deleted": 38,
+        "failed": 0,
+        "sample_deleted": [
+          "feat/root-cause-falsification-runtime-gate-20260928",
+          "feat/root-cause-falsification-global-20260928",
+          "migration/org-to-personal-owner-safe-20260927",
+          "fix/git-config-line-endings-20260912",
+          "chatgpt/github-host-root-v3-20260911",
+          "chatgpt/github-operation-loop-v2-20260911",
+          "fix/chatgpt-github-plugin-bridge-20260910",
+          "fix/executable-integrity-fault-tests-20260910",
+          "fix/github-execution-integrity-20260910",
+          "feat/superpowers-conversation-runtime",
+          "feat/unified-ai-deliberation-council-20260904",
+          "research/cross-chat-ai-convergence-20260904",
+          "feat/upstream-native-goal-harness-v4",
+          "feat/task-goal-intelligence-v23-truth-maintenance",
+          "fix/task-goal-v3-doc-durability",
+          "feat/semantic-auto-invoke-routing-v2",
+          "goal-understanding-intelligence-v2-20260904",
+          "feat/goal-intelligence-v2-integration",
+          "feat/task-goal-understanding-v2",
+          "fix/blocker-progress-gate-20260902"
+        ]
+      },
+      "xq22115/repo-rescue-proof": {
+        "deleted": 0,
+        "failed": 0,
+        "sample_deleted": []
+      },
+      "xq22115/vercel-ai-foundation-e2e-canary": {
+        "deleted": 0,
+        "failed": 0,
+        "sample_deleted": []
+      },
+      "xq22115/org-control-plane": {
+        "deleted": 0,
+        "failed": 0,
+        "sample_deleted": []
+      }
+    }
+  }
+}
