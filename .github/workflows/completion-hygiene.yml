@@ -1,0 +1,46 @@
+name: Completion Hygiene
+
+on:
+  schedule:
+    - cron: "40 3 * * 1"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: report or apply
+        required: true
+        default: report
+        type: choice
+        options: [report, apply]
+      repo:
+        description: owner/name
+        required: false
+        default: xq22115/braintrust
+
+permissions:
+  contents: read
+
+jobs:
+  hygiene:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+      pull-requests: write
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run durable hygiene
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MODE: ${{ github.event_name == 'workflow_dispatch' && inputs.mode || 'report' }}
+          TARGET_REPO: ${{ github.event_name == 'workflow_dispatch' && inputs.repo || 'xq22115/braintrust' }}
+        run: |
+          set -euo pipefail
+          SLUG=${TARGET_REPO//\//__}
+          /usr/bin/python3 scripts/durable_hygiene.py --repo "$TARGET_REPO" --mode "$MODE" --checkpoint "evidence/hygiene-checkpoint-$SLUG.json" --receipt "evidence/completion-receipt-$SLUG-$MODE.json"
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: completion-hygiene-${{ github.run_id }}
+          path: evidence/completion-receipt-*.json
+          if-no-files-found: warn
