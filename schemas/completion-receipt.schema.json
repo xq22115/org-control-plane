@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/xq22115/org-control-plane/schemas/completion-receipt.schema.json",
+  "title": "CompletionReceipt",
+  "type": "object",
+  "required": ["schema_version", "as_of", "repo", "mode", "status", "ops"],
+  "properties": {
+    "schema_version": { "const": 1 },
+    "as_of": { "type": "string", "format": "date-time" },
+    "repo": { "type": "string" },
+    "mode": { "enum": ["report", "apply"] },
+    "status": { "enum": ["RUNNING", "PARTIAL", "BLOCKED", "VERIFIED"] },
+    "checkpoint_path": { "type": "string" },
+    "ops": {
+      "type": "object",
+      "properties": {
+        "prs_closed": { "type": "integer" },
+        "branches_deleted": { "type": "integer" },
+        "failed": { "type": "integer" },
+        "skipped": { "type": "integer" }
+      }
+    },
+    "readback": { "type": "object" },
+    "errors": { "type": "array", "items": { "type": "string" } }
+  }
+}
