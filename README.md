@@ -26,3 +26,8 @@ Organization control plane after Enterprise/Team → **Free org** + personal **P
 - Private-repo rulesets / classic branch protection on Free org
 - Private environment wait timers / required reviewers (Enterprise)
 - Blind required-status walls that freeze agent push without a green aggregate job
+
+## Latest strengthen pass
+
+- [RE-AUDIT-3X-AFTER.md](./RE-AUDIT-3X-AFTER.md) — live ≥3× after metrics (2026-10-29)
+- [evidence/after_3x_metrics.json](./evidence/after_3x_metrics.json)
