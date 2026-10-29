@@ -1,6 +1,6 @@
 # GPT ordinary-chat × GitHub plugin strength
 
-Version: `2026-10-29.2`  
+Version: `2026-10-29.2`
 Owner contracts live in `xq22115/braintrust` `.chatgpt/`.
 
 ## Root cause (why answers stayed shallow)
@@ -20,12 +20,12 @@ For every **substantive** ordinary-chat turn when the GitHub app/plugin is conne
 4. Deepen with plugin calls (`get_me` / `list_*` / `search_*` / exact reads) via `.chatgpt/ordinary-chat-github-loop.md`
 5. `CONSTRUCT → FALSIFY → SYNTHESIZE` until no material delta; sleep/queue = zero depth credit
 
-Wired from: bootstrap, profile, capabilities (`plugin_thinking_link` in `default_always_on`), core, preflight.  
+Wired from: bootstrap, profile, capabilities (`plugin_thinking_link` in `default_always_on`), core, preflight.
 `.agents/skills/ordinary-chat-ultra-deliberation/SKILL.md` is an **intensifier**, not the only depth switch.
 
 ## Product honesty
 
-`CONFIGURED ≠ CONNECTED ≠ CALLABLE ≠ EFFECT_VERIFIED`  
+`CONFIGURED ≠ CONNECTED ≠ CALLABLE ≠ EFFECT_VERIFIED`
 Repository text cannot change OpenAI server-side reasoning budgets or hard safety. Soft over-refusal may retry ≤2 alternate GitHub/search routes; never claim provider hard unlock.
 
 ## Five angles (SSOT)
