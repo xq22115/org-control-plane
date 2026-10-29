@@ -1,0 +1,24 @@
+{
+  "as_of": "2026-10-29T14:20:00Z",
+  "agents": [
+    "deletion_hawk",
+    "preservation_dove",
+    "security_auditor",
+    "automation_keeper",
+    "merge_architect"
+  ],
+  "closed": [
+    903,
+    922
+  ],
+  "merged": [
+    918,
+    919
+  ],
+  "kept_open": [
+    920,
+    916,
+    837
+  ],
+  "honesty": "Provider hard safety cannot be removed; soft over-refusal continues via alternate GitHub/search routes."
+}
