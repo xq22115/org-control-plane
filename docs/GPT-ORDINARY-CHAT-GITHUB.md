@@ -1,6 +1,6 @@
 # GPT ordinary-chat × GitHub plugin strength
 
-Version: `2026-10-29.3`
+Version: `2026-10-29.4`
 Owner contracts live in `xq22115/braintrust` `.chatgpt/`.
 
 ## Root cause (why answers stayed shallow)
@@ -20,10 +20,22 @@ For every **substantive** ordinary-chat turn when the GitHub app/plugin is conne
 4. Deepen with plugin calls (`get_me` / `list_*` / `search_*` / exact reads) via `.chatgpt/ordinary-chat-github-loop.md`
 5. `CONSTRUCT → FALSIFY → SYNTHESIZE` until no material delta; sleep/queue = zero depth credit
 
-Wired from: bootstrap, profile, capabilities (`plugin_thinking_link` in `default_always_on`), core, preflight.
+Wired from: bootstrap, profile, capabilities (`plugin_thinking_link` in `default_always_on`), core, preflight, **context-policy module**, global acceptance D7.
 `.agents/skills/ordinary-chat-ultra-deliberation/SKILL.md` is an **intensifier**, not the only depth switch.
 
 Landed: `xq22115/braintrust` PR #925 merged to `main` as `9101f6a1225b4a355fd04ea626b8043214ee00ca` (2026-10-29).
+
+
+## Deepen (2026-10-29.4) — machine router + acceptance
+
+After #925, prose/bootstrap already named the thinking link, but the **machine router** still lagged:
+
+1. `.chatgpt/ordinary-chat-context-policy.json` now registers `modules.plugin_thinking_link` as scoped `default=true` (substantive turns when GitHub callable; **not** byte `default_preload`).
+2. `ultra_deliberation` role = `intensifier_after_plugin_thinking_link`.
+3. Capability registry test + new contract test lock `default_always_on = [github_connector, plugin_thinking_link]`.
+4. Global acceptance adds **D7** `plugin_thinking_link_five_angle_default_on` with truth_rules forbidding keyword-gated depth.
+
+Landed track: braintrust PR #926 (open/merging). EFFECT_VERIFIED on ChatGPT ordinary-chat product remains **NOT RUN**.
 
 ## Product honesty
 
