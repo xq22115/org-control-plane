@@ -1,0 +1,87 @@
+{
+  "as_of": "2026-10-29T10:41:13.093845+00:00",
+  "baseline": {
+    "braintrust_open_prs_approx": 203,
+    "braintrust_branches": 527,
+    "closeout_state": "SyntaxError on main (run 40855582350)",
+    "reconcile_noise": "unbounded stale BLOCKED SHA redispatches",
+    "required_checks_mismatch_reported": true
+  },
+  "after": {
+    "repos": {
+      "xq22115/braintrust": {
+        "branches": 24,
+        "open_prs": 19
+      },
+      "xq22115/demo-repository": {
+        "branches": 14,
+        "open_prs": 13
+      },
+      "xq22115/ai-thinking-debate-skills-lab": {
+        "branches": 21,
+        "open_prs": 20
+      },
+      "xq22115/cursor": {
+        "branches": 7,
+        "open_prs": 6
+      },
+      "xq22115/repo-rescue-proof": {
+        "branches": 16,
+        "open_prs": 15
+      },
+      "xq22115/vercel-ai-foundation-e2e-canary": {
+        "branches": 2,
+        "open_prs": 1
+      },
+      "xq22115/org-control-plane": {
+        "branches": 2,
+        "open_prs": 1
+      }
+    },
+    "actions_capability_preserved": {
+      "enabled_repositories": "all",
+      "allowed_actions": "all",
+      "sha_pinning_required": null
+    },
+    "closeout_runs": [
+      {
+        "id": 40856320864,
+        "conclusion": "success",
+        "status": "completed",
+        "html_url": "https://github.com/xq22115/braintrust/actions/runs/40856320864",
+        "created_at": "2026-10-29T10:17:00Z"
+      },
+      {
+        "id": 40856204063,
+        "conclusion": "failure",
+        "status": "completed",
+        "html_url": "https://github.com/xq22115/braintrust/actions/runs/40856204063",
+        "created_at": "2026-10-29T10:16:08Z"
+      },
+      {
+        "id": 40856196874,
+        "conclusion": "cancelled",
+        "status": "completed",
+        "html_url": "https://github.com/xq22115/braintrust/actions/runs/40856196874",
+        "created_at": "2026-10-29T10:16:04Z"
+      }
+    ],
+    "verify_delivery_closure_compile_ok": true,
+    "required_checks_live_mismatch_count": 0,
+    "required_checks_note": "Re-diff 2026-10-29: all 15 required-checks.yml names match active workflows (prior P1 was false positive from pagination).",
+    "auto_merge": {
+      "note": "Private Free-org repos cannot enable allow_auto_merge (GitHub plan). Public/eligible repos set true where API allows."
+    }
+  },
+  "multipliers": {
+    "braintrust_branch_noise_reduction_x": 21.96,
+    "braintrust_open_pr_reduction_x": 10.68,
+    "closeout_red_noise": "SyntaxError+unbounded reconcile \u2192 success + empty reconcile_candidates (\u221e noise cut on false BLOCKED redispatches)"
+  },
+  "gates": {
+    "no_actions_capability_downgrade": true,
+    "closeout_green": true,
+    "script_compiles": true,
+    "ge_3x_branch_or_pr": true
+  }
+}
