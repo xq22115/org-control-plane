@@ -1,6 +1,6 @@
 # GPT ordinary-chat × GitHub plugin strength
 
-Version: `2026-10-29.2`
+Version: `2026-10-29.3`
 Owner contracts live in `xq22115/braintrust` `.chatgpt/`.
 
 ## Root cause (why answers stayed shallow)
@@ -22,6 +22,8 @@ For every **substantive** ordinary-chat turn when the GitHub app/plugin is conne
 
 Wired from: bootstrap, profile, capabilities (`plugin_thinking_link` in `default_always_on`), core, preflight.
 `.agents/skills/ordinary-chat-ultra-deliberation/SKILL.md` is an **intensifier**, not the only depth switch.
+
+Landed: `xq22115/braintrust` PR #925 merged to `main` as `9101f6a1225b4a355fd04ea626b8043214ee00ca` (2026-10-29).
 
 ## Product honesty
 
@@ -47,15 +49,14 @@ Compile fields: `PRIMARY_TASK`, `DESIRED_END_STATE`, `NEGATIONS`, `HARD_CONSTRAI
 | #837 | Ordinary-chat connected-app + GitHub connector action-contract (rebase onto main) |
 | #920 | Cross-AI Actions demand-load discovery bridge |
 | #916 | Dependabot group — KEEP draft; do not blind-merge SHA mega-pin |
-| thinking-link PR | Plugin thinking-link + five-angle default-on (this architecture) |
 
-Merged after debate: #918 (truth-guard), #919 (SHA pagination). Closed: #903, #922.
+Merged: #918 (truth-guard), #919 (SHA pagination), #925 (plugin thinking-link + five-angle). Closed: #903, #922.
 
 ## Canary before claiming boost
 
 1. `get_me` succeeds on the live GitHub connector
 2. One `list_*` or `search_*` returns repo-scoped data
-3. Thinking-link + five-angle contracts are retrievable from `braintrust@main` (or PR head under test)
+3. Thinking-link + five-angle contracts are retrievable from `braintrust@main`
 4. Receipt marks `actions_capability_preserved=true` and `five_angle_compiled=true` when substantive
 
 ## Output quality
